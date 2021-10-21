@@ -8,7 +8,7 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-@Entity
+@Entity  //@author: Diego Vergara Aranguri
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name="adoptantes")
