@@ -12,7 +12,7 @@ import javax.validation.constraints.Size;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "cliente")
+@Table(name = "usuario")
 @Setter
 @Getter
 public class Usuario {
