@@ -11,7 +11,7 @@ import javax.validation.constraints.Size;
 @Entity  //@author: Diego Vergara Aranguri
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name="adoptantes")
+@Table(name="adoptantess")
 public class Adoptante {
 
     @Id
