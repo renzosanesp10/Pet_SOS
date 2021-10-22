@@ -1,39 +1,37 @@
 package com.petsos.api.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-@Entity  //@author: Diego Vergara Aranguri
+//@author: Diego Vergara Aranguri
+
+@Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "adoptantess")
-@Getter
-@Setter
+@Table(name = "adoptantes")
+@Data
 public class Adoptante {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Integer idAdoptante;
+
+    @NotNull
+    @Column (name="nombres", nullable = false, length = 50)
+    private String nombres;
+
+    @NotNull
+    @Column (name="apellidos",  nullable = false,length = 70)
+    private String apellidos;
 
     @NotNull
     @Size(min=8, max=8, message ="DNI debe tener 8 caracteres")
     @Column (name="dni", nullable = false, length =  8, unique = true)
     private String dni;
-
-    @NotNull
-    @Column (name="nombre", nullable = false, length = 20)
-    private String nombre;
-
-    @NotNull
-    @Column (name="apellido", nullable = false, length = 30)
-    private String apellido;
 
     @NotNull
     @Size(min=5, max=150, message ="Direccion debe tener mínimo 5 caracteres")
@@ -55,8 +53,8 @@ public class Adoptante {
     private String email;
 
     @NotNull
+    @Size(min=1, max=1, message = "El estado debe tener 1 caracter P=pendiente, D=descartado, A=aceptado")
     @Column(name="estado", nullable = false, length = 1)
     private String estado;
-
 
 }

@@ -12,7 +12,7 @@ import javax.validation.constraints.Size;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "cliente")
+@Table(name = "usuarios")
 @Setter
 @Getter
 public class Usuario {
@@ -45,5 +45,6 @@ public class Usuario {
     @Size(min=1, max=1, message ="Estado debe tener 1 caracter")
     @Column (name="estado", nullable = false, length = 1)
     private String estado;
+
 
 }
