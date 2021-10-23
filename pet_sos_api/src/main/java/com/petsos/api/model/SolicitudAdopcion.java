@@ -22,7 +22,7 @@ public class SolicitudAdopcion {
     @ManyToOne
     @JoinColumn(name = "id_publicacion", nullable = false,
             foreignKey = @ForeignKey(name = "Fk_solicitudAdopcion_publicacion"))
-    private Publicaciones  publicacion;
+    private Publicacion  publicacion;
 
     @ManyToOne
     @JoinColumn(name = "id_adoptante", nullable = false,
@@ -53,11 +53,11 @@ public class SolicitudAdopcion {
         this.descripcion = descripcion;
     }
 
-    public Publicaciones getPublicacion() {
+    public Publicacion getPublicacion() {
         return publicacion;
     }
 
-    public void setPublicacion(Publicaciones publicacion) {
+    public void setPublicacion(Publicacion publicacion) {
         this.publicacion = publicacion;
     }
 
