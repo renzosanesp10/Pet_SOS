@@ -5,6 +5,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "mascotas")
@@ -15,31 +16,33 @@ public class Mascota {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idMascota;
     @NotNull
-    @Column (name="tipos", nullable = false, length = 50)
+    @Size (min=4, max=15, message ="El Tipo de tener maximo 15 caracteres")
+    @Column (name="tipo", nullable = false, length = 50)
     private String tipo;
     @NotNull
-    @Column (name="nombres", nullable = false, length = 50)
+    @Size (min=3, max=15, message ="El Nombre de tener maximo 15 caracteres")
+    @Column (name="nombre", nullable = false, length = 50)
     private String nombre;
     @NotNull
-    @Column (name="edades", nullable = false )
+    @Column (name="edade", nullable = false )
     private Integer edad;
     @NotNull
-    @Column (name="tamannos", nullable = false, length = 20)
+    @Column (name="tamanno", nullable = false, length = 20)
     private String tamanno;
     @NotNull
-    @Column (name="sexos", nullable = false, length = 10)
+    @Column (name="sexo", nullable = false, length = 10)
     private String sexo;
     @NotNull
-    @Column (name="nivelActividades", nullable = false, length = 10)
+    @Column (name="nivelActividad", nullable = false, length = 10)
     private String nivelActividad;
     @NotNull
-    @Column (name="descripciones", nullable = false, length = 100)
+    @Column (name="descripcion", nullable = false, length = 100)
     private String descripcion;
     @NotNull
-    @Column (name="fotos", nullable = false, length = 100)
+    @Column (name="foto", nullable = false, length = 100)
     private String foto;
     @NotNull
-    @Column (name="estados", nullable = false, length = 1)
+    @Size (min=1, max=1, message ="El Estado de tener sólo 1 caracter")
+    @Column (name="estado", nullable = false, length = 1)
     private String estado;
-
 }

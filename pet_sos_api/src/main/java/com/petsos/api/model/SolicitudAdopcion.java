@@ -22,7 +22,7 @@ public class SolicitudAdopcion {
     @ManyToOne
     @JoinColumn(name = "id_publicacion", nullable = false,
             foreignKey = @ForeignKey(name = "Fk_solicitudAdopcion_publicacion"))
-     private  Publicacion publicaciones;
+    private Publicacion  publicacion;
 
     @ManyToOne
     @JoinColumn(name = "id_adoptante", nullable = false,
