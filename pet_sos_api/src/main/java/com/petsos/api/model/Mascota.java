@@ -50,7 +50,7 @@ public class Mascota {
 
     @NotNull
     @Size(min=4, max=250)
-    @Column(name="descripciond", nullable = false)
+    @Column(name="descripcion", nullable = false)
     private String descripcion;
 
     @NotNull
