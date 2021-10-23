@@ -1,29 +1,34 @@
 package com.petsos.api.model;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 import javax.persistence.*;
-import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+import java.time.LocalDateTime;
 
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "publicaciones")
-@Getter
-@Setter
-
-public class Publicaciones {
+@Data
+public class Publicacion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer IdPublicacion;
-    private LocalDateTime Fechapublicacion;
-    private String Descripcion;
+    private Integer idPublicacion;
 
+    @NotNull
+    @Column(name="descripcion", nullable=true, length=250)
+    private String decripcion;
+
+    @Column (name="fecha", nullable=false)
+    private LocalDateTime fecha;
+
+    @ManyToOne
+    @JoinColumn(name="id_propietario", nullable=false, foreignKey = @ForeignKey(name="FK_publicacion_propietario"))
+    private  Propietario propitario;
+
+    @ManyToOne @JoinColumn (name="id_mascota", nullable=false, foreignKey = @ForeignKey(name="FK_publicacion_mascota"))
+    private Mascota mascota;
 }
-
-

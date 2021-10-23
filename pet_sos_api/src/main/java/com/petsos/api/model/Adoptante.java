@@ -1,6 +1,12 @@
 package com.petsos.api.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import lombok.*;
+
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
@@ -51,10 +57,5 @@ public class Adoptante {
     @Email(message="Email formato incorrecto")
     @Column(name="email", nullable = false, length = 150)
     private String email;
-
-    @NotNull
-    @Size(min=1, max=1, message = "El estado debe tener 1 caracter P=pendiente, D=descartado, A=aceptado")
-    @Column(name="estado", nullable = false, length = 1)
-    private String estado;
 
 }
