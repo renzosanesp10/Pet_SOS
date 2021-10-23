@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "381db7e1-4ea4-40a2-bea0-f20bf84415b1",
+		"name": "PetSosApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Registrar Adoptante",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombres\":\"Paola Julia\",\r\n    \"apellidos\":\"Hurtado Perez\",\r\n    \"dni\":\"71237574\",\r\n    \"direccion\":\"Calle Jose Hoyle #475 Av. Perú\",\r\n    \"ciudad\":\"Trujillo\",\r\n    \"telefono\":\"933547514\",\r\n    \"email\":\"pao_julia@upao.edu.pe\",\r\n    \"estado\":\"A\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/adoptantes",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"adoptantes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar Adoptante",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idAdoptante\":1,\r\n    \"nombres\":\"Diego Jesús\",\r\n    \"apellidos\":\"Vergara Aranguri\",\r\n    \"dni\":\"75847571\",\r\n    \"direccion\":\"Pablo Picasso #874 - Primavera\",\r\n    \"ciudad\":\"Trujillo\",\r\n    \"telefono\":\"968574577\",\r\n    \"email\":\"dvergaraa@upao.edu.pe\",\r\n    \"estado\":\"D\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/adoptantes",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"adoptantes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Adoptantes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{base_url}}/adoptantes",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"adoptantes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener adoptante por Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/adoptantes/1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"adoptantes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar adoptante",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/adoptantes/3",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"adoptantes",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8080"
+		}
+	]
+}

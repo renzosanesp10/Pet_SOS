@@ -1,8 +1,6 @@
 package com.petsos.api.controller;
 
-import com.petsos.api.model.Adoptante;
 import com.petsos.api.model.Propietario;
-import com.petsos.api.services.AdoptanteService;
 import com.petsos.api.services.PropietarioService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

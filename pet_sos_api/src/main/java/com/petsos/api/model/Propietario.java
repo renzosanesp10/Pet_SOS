@@ -1,8 +1,6 @@
 package com.petsos.api.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 import javax.persistence.Column;
@@ -16,6 +14,8 @@ import javax.validation.constraints.Size;
 @AllArgsConstructor
 @Table(name = "propietarios")
 @Data
+@Getter
+@Setter
 public class Propietario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

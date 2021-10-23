@@ -1,5 +1,6 @@
 package com.petsos.api.model;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -12,6 +13,7 @@ import javax.validation.constraints.Size;
 @Table(name = "mascotas")
 @Getter
 @Setter
+@Data
 public class Mascota {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

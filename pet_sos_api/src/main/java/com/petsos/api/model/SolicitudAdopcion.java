@@ -1,13 +1,17 @@
 package com.petsos.api.model;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Data
 @Entity
-@Table(name="solicitud_adopcion")
-
+@Table(name = "solicitud_adopcion")
+@Getter
+@Setter
 public class SolicitudAdopcion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -1,8 +1,6 @@
 package com.petsos.api.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -13,6 +11,8 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Table(name = "publicaciones")
 @Data
+@Getter
+@Setter
 public class Publicacion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
