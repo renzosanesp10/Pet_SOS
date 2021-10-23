@@ -16,7 +16,7 @@ public class SolicitudAdopcion {
     @Column(name = "fecha", nullable = false)
     private LocalDateTime fechaPublicacion;
 
-    @Column(String="descripcion", nullable = false, length = 250)
+    @Column(name="descripcion", nullable = false, length = 250)
     private String descripcion;
 
     @ManyToOne
