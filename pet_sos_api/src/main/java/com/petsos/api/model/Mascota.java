@@ -16,34 +16,50 @@ public class Mascota {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idMascota;
+
     @NotNull
-    @Size (min=4, max=15, message ="El Tipo de tener maximo 15 caracteres")
-    @Column (name="tipo", nullable = false, length = 50)
+    @Size(min=4, max=15, message = "El tipo de tener máximo 15 caracteres")
+    @Column(name="tipo", nullable = false, length = 15)
     private String tipo;
+
     @NotNull
-    @Size (min=3, max=15, message ="El Nombre de tener maximo 15 caracteres")
-    @Column (name="nombre", nullable = false, length = 50)
+    @Size(min=4, max=20, message = "El nombre de tener máximo 20 caracteres")
+    @Column(name="nombre", nullable = false, length = 20)
     private String nombre;
-    @NotNull
-    @Column (name="edade", nullable = false )
+
+
+    @Column(name="Edad", nullable = false)
     private Integer edad;
+
+
     @NotNull
-    @Column (name="tamanno", nullable = false, length = 20)
-    private String tamanno;
+    @Size(min=4, max=10, message = "El tamaño de tener máximo 10 caracteres")
+    @Column(name="tamano", nullable = false, length = 10)
+    private String tamano;
+
+
     @NotNull
-    @Column (name="sexo", nullable = false, length = 10)
+    @Size(min=4, max=10, message = "El sexo de tener máximo 10 caracteres")
+    @Column(name="sexo", nullable = false, length = 10)
     private String sexo;
+
     @NotNull
-    @Column (name="nivelActividad", nullable = false, length = 10)
+    @Size(min=4, max=20, message = "El nivel de Actividad de tener máximo 20 caracteres")
+    @Column(name="nivel_actividad", nullable = false, length = 20)
     private String nivelActividad;
+
     @NotNull
-    @Column (name="descripcion", nullable = false, length = 100)
+    @Size(min=4, max=250)
+    @Column(name="descripciond", nullable = false)
     private String descripcion;
+
     @NotNull
-    @Column (name="foto", nullable = false, length = 100)
+    @Size(min=30 )
+    @Column(name="foto", nullable = false)
     private String foto;
+
     @NotNull
-    @Size (min=1, max=1, message ="El Estado de tener sólo 1 caracter")
-    @Column (name="estado", nullable = false, length = 1)
+    @Size(min=1, max=1 )
+    @Column(name="estado", nullable = false, length = 1)
     private String estado;
 }
