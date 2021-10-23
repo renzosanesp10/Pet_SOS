@@ -1,6 +1,15 @@
 package com.petsos.api.model;
 
+<<<<<<< HEAD
+import jdk.nashorn.internal.objects.annotations.Getter;
+import jdk.nashorn.internal.objects.annotations.Setter;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+=======
 import lombok.*;
+>>>>>>> 17d06723b075096c12515d06bac20035f7539ef7
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
