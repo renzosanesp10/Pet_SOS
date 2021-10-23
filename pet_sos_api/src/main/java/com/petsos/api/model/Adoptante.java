@@ -52,9 +52,4 @@ public class Adoptante {
     @Column(name="email", nullable = false, length = 150)
     private String email;
 
-    @NotNull
-    @Size(min=1, max=1, message = "El estado debe tener 1 caracter P=pendiente, D=descartado, A=aceptado")
-    @Column(name="estado", nullable = false, length = 1)
-    private String estado;
-
 }
