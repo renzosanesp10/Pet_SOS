@@ -7,7 +7,6 @@ import java.util.List;
 
 public interface PropietarioService {
 
-
     Propietario registrarPropietario(Propietario propietario);
     Propietario modificarPropietario(Propietario propietario);
     List<Propietario> listaPropietarios();

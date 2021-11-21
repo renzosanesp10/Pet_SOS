@@ -20,8 +20,6 @@ import javax.validation.constraints.Size;
 @AllArgsConstructor
 @Table(name = "adoptantes")
 @Data
-@Getter
-@Setter
 public class Adoptante {
 
     @Id

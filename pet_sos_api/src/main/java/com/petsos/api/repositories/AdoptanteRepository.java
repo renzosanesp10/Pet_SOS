@@ -7,4 +7,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface AdoptanteRepository extends JpaRepository<Adoptante, Integer> {
     //QUERY ---> Utiliza un lenguaje de consulta JPQL (Java Persistence Query Languaje)
+
 }

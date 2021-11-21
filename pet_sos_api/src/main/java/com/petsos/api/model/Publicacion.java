@@ -4,6 +4,7 @@ import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.time.LocalDateTime;
 
 @Entity
@@ -19,15 +20,20 @@ public class Publicacion {
     private Integer idPublicacion;
 
     @NotNull
-    @Column(name="descripcion", nullable=true, length=250)
-    private String decripcion;
+    @Column(name="nombre", nullable=true, length=150)
+    private String nombre;
 
-    @Column (name="fecha", nullable=false)
-    private LocalDateTime fecha;
+    @NotNull
+    @Column(name="descripcion", nullable=true, length=250)
+    private String descripcion;
+
+    @NotNull
+    @Column(name="foto", nullable = false)
+    private String foto;
 
     @ManyToOne
     @JoinColumn(name="id_propietario", nullable=false, foreignKey = @ForeignKey(name="FK_publicacion_propietario"))
-    private  Propietario propitario;
+    private  Propietario propietario;
 
     @ManyToOne @JoinColumn (name="id_mascota", nullable=false, foreignKey = @ForeignKey(name="FK_publicacion_mascota"))
     private Mascota mascota;

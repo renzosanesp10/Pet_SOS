@@ -29,13 +29,12 @@ public class Mascota {
     @Column(name="nombre", nullable = false, length = 20)
     private String nombre;
 
-
+    @Size(max=3, message = "La edad debe no debe pasar más de 2 digitos")
     @Column(name="Edad", nullable = false)
     private Integer edad;
 
-
     @NotNull
-    @Size(min=4, max=10, message = "El tamaño de tener máximo 10 caracteres")
+    @Size(min=4, max=15, message = "El tamaño de tener máximo 10 caracteres")
     @Column(name="tamano", nullable = false, length = 10)
     private String tamano;
 
@@ -56,7 +55,7 @@ public class Mascota {
     private String descripcion;
 
     @NotNull
-    @Size(min=30 )
+    @Size(min=150)
     @Column(name="foto", nullable = false)
     private String foto;
 

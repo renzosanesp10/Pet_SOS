@@ -11,6 +11,7 @@ import java.util.List;
 public class MascotaServiceImpl  implements MascotaService{
 
     private final MascotaRepository mascotaRepository;
+    private int edad=5;
 
     public MascotaServiceImpl(MascotaRepository mascotaRepository){
         this.mascotaRepository = mascotaRepository;
@@ -18,7 +19,12 @@ public class MascotaServiceImpl  implements MascotaService{
 
     @Override
     public Mascota registrarMascota(Mascota mascota) {
-        return mascotaRepository.save(mascota);
+
+        if(mascota.getEdad()<=this.edad){
+            return mascotaRepository.save(mascota);
+        } else {
+            return null;
+        }
     }
 
     @Override
